@@ -1,0 +1,39 @@
+﻿<Window x:Class="InheritanceCode.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InheritanceCode"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="bFind" Content="Find Window" Margin="15" Click="bFind_Click"/>
+        <TextBox x:Name="tbNameWin" Grid.Column="1" Margin="15"/>
+        <Button x:Name="bClose" Grid.Row="3" Content="Close Window" Margin="15" Click="bClose_Click"/>
+        <Button x:Name="bSetText" Grid.Row="2" Content="Set text at window title" Margin="15" Click="bSetText_Click"/>
+        <Button x:Name="bMoveWin" Grid.Row="1" Content="Move window" Margin="15" Click="bChangeColor_Click"/>
+        <TextBox x:Name="tbSetText" Grid.Column="1" Grid.Row="2" Margin="15"/>
+        
+        <StackPanel Grid.Column="1" Grid.Row="1" Margin="14" >
+            <ComboBox x:Name="cbMoveX" Text="X" IsEditable="True"  />
+            <ComboBox x:Name="cbMoveY"  Text="Y" IsEditable="True"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="1" Margin="14" >
+            <ComboBox x:Name="cbMoveW" Text="Width" IsEditable="True" />
+            <ComboBox x:Name="cbMoveH"  Text="Height" IsEditable="True" />
+        </StackPanel>
+    </Grid>
+</Window>
